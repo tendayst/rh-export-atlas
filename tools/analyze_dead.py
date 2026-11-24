@@ -10,19 +10,25 @@ reachable, but *whose* 3% is dead — Mathlib's (expected, since the export carr
 whatever was imported) or the submission's own (that would be real waste).
 """
 import array
+import sys
 import json
 import collections
 import numpy as np
-
-import os
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE = os.path.join(ROOT, 'data')
 
 SUBMISSION_NS = {
     'GlobalTheory', 'Formalism', 'GroundTheory', 'PositivityTheory', 'UpperTheory',
     'ReciprocityTheory', 'PI', 'LateralTheory', 'CrystallineSemistableComparison',
     'FunctorialResolution', 'CompanionTheory',
 }
+# Reuse on another project: pass the top-level namespaces that belong to the
+# submission as argv[1]:
+#     python analyze_dead.py "MyTheory,MyLemmaLib"
+if len(sys.argv) > 1:
+    SUBMISSION_NS = set(x.strip() for x in sys.argv[1].split(',') if x.strip())
+
+import os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE = os.path.join(ROOT, 'data')
 
 # declarations table: (name_id, value_root) pairs
 raw = array.array('q')

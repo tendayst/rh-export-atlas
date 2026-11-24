@@ -18,13 +18,18 @@ import zstandard as zstd
 SRC = sys.argv[1]
 OUT = sys.argv[2]
 
-HEADLINE = {
+# Which theorems to root the later reachability pass at. Pass a comma-separated
+# list of short names as argv[3] to use this tool on any other project:
+#     python pass2a.py export.ndjson.zst meta "mainTheorem,keyLemma"
+DEFAULT_HEADLINE = {
     'riemannHypothesis',
     'riemannZeta_eq_zero_re',
     'LFunction_ne_zero_of_half_lt_re',
     'LFunction_eq_zero_re',
     'LFunction_eq_zero_re_of_isPrimitive',
 }
+HEADLINE = (set(x.strip() for x in sys.argv[3].split(',') if x.strip())
+            if len(sys.argv) > 3 else DEFAULT_HEADLINE)
 
 name_str = {}          # name id -> str component
 name_pre = {}          # name id -> parent name id (-1 = root)

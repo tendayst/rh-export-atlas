@@ -198,6 +198,37 @@ Two engineering notes worth copying:
 | `results/dead_ownership.json` | Live/dead split by owner |
 | `data/` | **not committed** — generated locally by the scripts above |
 
+## Using this on another project
+
+Nothing in `tools/` is specific to the Riemann Hypothesis except two literals, and
+both are now optional arguments:
+
+| What | Where | Default |
+|---|---|---|
+| Theorems to root the closure at | `pass2a.py` argv[3] | the five RH theorems |
+| Namespaces belonging to the submission | `analyze_dead.py` argv[1] | the eleven RH namespaces |
+
+On any other `lean4export` archive:
+
+```bash
+python tools/pass2a.py export.ndjson.zst meta "mainTheorem,keyLemma"
+python tools/pass2b.py export.ndjson.zst meta.full
+python tools/pass3.py export.ndjson export.idx meta reach.json
+python tools/analyze_dead.py "MyTheory,MyLib"
+```
+
+`pass3.py` reads the roots out of `meta.json`, so it follows automatically.
+
+What the pipeline gives you for any project:
+
+* reachability from a chosen set of theorems (node-level and declaration-level)
+* a live/dead split per namespace, and by submission vs dependency
+* granularity statistics (module size, instance share, reference degrees)
+* a proof-term depth histogram
+
+The RH defaults reproduce the published numbers exactly, so the parametrization is
+verified in both directions.
+
 ## License
 
 Split deliberately:
