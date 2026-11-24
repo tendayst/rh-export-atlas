@@ -1,0 +1,29 @@
+CC0 1.0 Universal — Public Domain Dedication
+
+Applies to: README.md, FINDINGS.md, and everything under results/.
+
+The measurements in this repository are facts about a public artifact. Facts
+should not need permission to be reused, so these files are dedicated to the
+public domain to the fullest extent permitted by law.
+
+To the extent possible under law, the authors have waived all copyright and
+related or neighboring rights to this data and documentation. You may copy,
+modify, distribute and perform the work, even for commercial purposes, all
+without asking permission.
+
+Full legal text: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+---
+
+Scope note
+
+This dedication does NOT cover:
+
+* the Lean source of the Riemann Hypothesis proof, which is not included in this
+  repository and carries no license of its own;
+* the `lean4export` tooling, Mathlib, or Lean itself;
+* the work of `keithadler/rh-trim`, `leanprover-community/riemann-hypothesis`, or
+  any other third-party project referenced here.
+
+Only the numbers, the prose, and the scripts in `tools/` (under MIT, see
+LICENSE) originate here.

@@ -1,0 +1,162 @@
+{
+  "archive": {
+    "files": 175188,
+    "source_lines": 17374242,
+    "compressed_bytes": 7699933588,
+    "inflated_gb": 61.57,
+    "ndjson_lines": 1080769508
+  },
+  "graph": {
+    "expr_nodes": 1065214329,
+    "name_entries": 14065150,
+    "declarations": 1484726,
+    "declarations_with_proof": 1460442
+  },
+  "reachability": {
+    "expr_live": 1033000914,
+    "expr_live_pct": 96.98,
+    "decl_live": 1439433,
+    "decl_dead": 45293,
+    "decl_live_pct": 96.95
+  },
+  "granularity": {
+    "files": 175188,
+    "lines": 17374242,
+    "lines_per_file": 99.2,
+    "mathlib_lines_per_file": 252,
+    "instance_name_share": 47.41,
+    "top20_namespaces": [
+      {
+        "ns": "GlobalTheory",
+        "declarations": 620019,
+        "live": 606009
+      },
+      {
+        "ns": "Formalism",
+        "declarations": 235902,
+        "live": 227310
+      },
+      {
+        "ns": "_private",
+        "declarations": 112431,
+        "live": 111603
+      },
+      {
+        "ns": "GroundTheory",
+        "declarations": 76714,
+        "live": 74610
+      },
+      {
+        "ns": "PositivityTheory",
+        "declarations": 65407,
+        "live": 63607
+      },
+      {
+        "ns": "UpperTheory",
+        "declarations": 60030,
+        "live": 55088
+      },
+      {
+        "ns": "ReciprocityTheory",
+        "declarations": 44239,
+        "live": 42854
+      },
+      {
+        "ns": "PI",
+        "declarations": 31214,
+        "live": 30693
+      },
+      {
+        "ns": "CategoryTheory",
+        "declarations": 20588,
+        "live": 18929
+      },
+      {
+        "ns": "(root)",
+        "declarations": 16433,
+        "live": 15182
+      },
+      {
+        "ns": "LateralTheory",
+        "declarations": 13705,
+        "live": 13336
+      },
+      {
+        "ns": "CrystallineSemistableComparison",
+        "declarations": 9133,
+        "live": 8134
+      },
+      {
+        "ns": "FunctorialResolution",
+        "declarations": 6489,
+        "live": 6152
+      },
+      {
+        "ns": "CompanionTheory",
+        "declarations": 6175,
+        "live": 5944
+      },
+      {
+        "ns": "AlgebraicGeometry",
+        "declarations": 5435,
+        "live": 5181
+      },
+      {
+        "ns": "MeasureTheory",
+        "declarations": 5044,
+        "live": 4868
+      },
+      {
+        "ns": "Set",
+        "declarations": 3533,
+        "live": 3488
+      },
+      {
+        "ns": "Polynomial",
+        "declarations": 3091,
+        "live": 3049
+      },
+      {
+        "ns": "Nat",
+        "declarations": 3040,
+        "live": 3005
+      },
+      {
+        "ns": "Matrix",
+        "declarations": 2672,
+        "live": 2616
+      }
+    ]
+  },
+  "owners": {
+    "OTHER": {
+      "declarations": 186835,
+      "live": 178911,
+      "dead": 7924
+    },
+    "SUBMISSION": {
+      "declarations": 1185460,
+      "live": 1148919,
+      "dead": 36541
+    },
+    "_private": {
+      "declarations": 112431,
+      "live": 111603,
+      "dead": 828
+    }
+  },
+  "depth": {
+    "max": 14641,
+    "p99_9": 248,
+    "p99": 153,
+    "median": 39,
+    "mean": 44.7,
+    "share_under_200": 99.71,
+    "gt_1000": 61,
+    "gt_3000": 13,
+    "note": "proof-term AST nesting per declaration; immune to DAG sharing"
+  },
+  "dag_sharing": {
+    "note": "unfolded tree size overflows int64; the DAG shares exponentially, which is why Lean can check 1.07e9 nodes at this scale"
+  }
+}

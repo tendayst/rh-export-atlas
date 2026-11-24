@@ -1,0 +1,16 @@
+{
+  "depth_max": 14641,
+  "depth_p999": 248,
+  "depth_p99": 153,
+  "depth_median": 39,
+  "depth_mean": 44.68,
+  "log2size_max": 4.5977379740646543e+24,
+  "log2size_p99": 89783912.0,
+  "log2size_median": 5903.0,
+  "concentration": {
+    "25pct": 1,
+    "50pct": 1,
+    "75pct": 1,
+    "90pct": 1
+  }
+}

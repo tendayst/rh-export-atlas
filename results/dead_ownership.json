@@ -1,0 +1,20 @@
+{
+  "OTHER": {
+    "declarations": 186835,
+    "live": 178911,
+    "dead": 7924,
+    "live_pct": 95.76
+  },
+  "SUBMISSION": {
+    "declarations": 1185460,
+    "live": 1148919,
+    "dead": 36541,
+    "live_pct": 96.92
+  },
+  "_private": {
+    "declarations": 112431,
+    "live": 111603,
+    "dead": 828,
+    "live_pct": 99.26
+  }
+}

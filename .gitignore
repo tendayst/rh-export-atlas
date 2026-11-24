@@ -1,0 +1,9 @@
+# data/ is generated locally and is far too large to commit
+data/
+
+# python
+__pycache__/
+*.pyc
+
+# outputs that can be regenerated
+results/*.npy
