@@ -64,6 +64,9 @@ Plus a genuinely human-readable account: Rubinstein's ~265-page mathematical
 write-up. That one was written by a person, and it is what "readable proof"
 actually means.
 
+**How these two errors were made** — as opposed to what the right numbers are —
+is written up separately in [POSTMORTEM.md](POSTMORTEM.md).
+
 ---
 
 ## Headline numbers
