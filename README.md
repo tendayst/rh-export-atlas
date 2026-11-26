@@ -17,6 +17,55 @@ Lean source. Every number below can be regenerated from the public mirror.
 
 ---
 
+## Correction (2026-11-26)
+
+Two claims in the first version were wrong. They are corrected here rather than
+quietly deleted.
+
+### 1. "97% reachable" does not mean "97% necessary"
+
+Reachability says a proof term **was used**. It does not say the same theorem
+could not have been reached a shorter way. Those are different questions, and I
+conflated them.
+
+On 2026-11-25, Luke Sernau and colleagues (with Claude) released a
+[76,000-line rewrite](https://github.com/lsernau/grh-lean) of the same theorem — a
+**224× reduction** — by *re-proving*, not pruning. Sernau's own note: "Also
+removed a lot of complexity (… uses a simpler integrality argument…)".
+
+What survives: the dead-code measurement, and its refutation of "most of the
+archive is unreferenced" (the actual figure is 3.05%). What does not survive: the
+inference "therefore there is nothing to compress". There was a great deal to
+compress; it just could not be removed by deleting.
+
+### 2. The 250,000-page figure was a joke
+
+Alpöge stated on 2026-11-23 that the "250,000+ pages" readable version was a
+deliberate exaggeration and was never intended for release. This repository's
+framing — "250,000 pages cannot be compressed toward 500" — inherited that number
+from secondary reporting without checking its provenance.
+
+The arithmetic was right. The input was fiction.
+
+What survives: every measurement taken from the 61.57 GB export (format,
+granularity, reachability closure, depth distribution). What does not: any
+arithmetic that begins at 250,000 pages, and any conclusion about how far
+compression can go.
+
+**Three artifacts now exist and are not versions of one thing:**
+
+| | lines | nature |
+|---|---|---|
+| original proof | 17,374,242 | kernel-checkable |
+| `grh` (Sernau) | ~300,000 | "fairly clean", readable |
+| `grh-compact` | 76,000 | verified, deliberately minimized, not for reading |
+
+Plus a genuinely human-readable account: Rubinstein's ~265-page mathematical
+write-up. That one was written by a person, and it is what "readable proof"
+actually means.
+
+---
+
 ## Headline numbers
 
 | Quantity | Value |
@@ -143,8 +192,13 @@ review) by the kernel checks. Nothing about whether the mathematics is good, or
 whether the argument can be compressed. In particular:
 
 > Reachability at 97% closes the "just delete the dead code" route to a readable
-> proof. There is no waste to delete. Compressing 250,000 pages toward 500 pages
-> requires **re-layering the abstraction**, not pruning.
+> proof. There is no waste to delete.
+>
+> **Superseded.** The original text continued: *"Compressing 250,000 pages toward
+> 500 pages requires re-layering the abstraction, not pruning."* Both halves are
+> now wrong. A 76,000-line rewrite exists — a 224× reduction — so there *was* a
+> great deal of compression available; and the 250,000-page starting point was the
+> author's joke, not a real artifact. See **Correction (2026-11-26)** above.
 
 The 485× gap between the archive and a human-readable paper is a granularity gap,
 not a redundancy gap.
